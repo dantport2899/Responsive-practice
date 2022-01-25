@@ -1,0 +1,83 @@
+body *{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main-doc{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: col;
+}
+
+#navbar{
+    background-color: rgb(226, 226, 226);
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px #ccc;
+
+}
+
+#navbar header{
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#navbar ul li{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+
+#navbar ul li a{
+    padding-left: 10%;
+    font-size: 15px;
+}
+
+.main-section{
+    padding-left: 23%;
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+.main-section h1{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.main-section p{
+    margin-bottom: 15px;
+}
+
+.main-section h3{
+    color: rgb(99, 99, 99);
+    margin-bottom: 15px;
+}
+
+.main-section .code{
+    background-color: #ccc;
+    width: fit-content;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.main-section ul{
+    padding-left: 60px;
+}
