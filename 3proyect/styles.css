@@ -1,0 +1,211 @@
+body *{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+body{
+    background-color: rgb(243, 243, 243);
+}
+
+#container{
+    margin: auto;
+    padding-top: 100px;
+    width: 90%;
+}
+
+#header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: fixed;
+
+    background-color: white;
+    box-shadow: 0px 0px 10px #ccc;
+    width: 90%;
+    top: 10px;
+    z-index: 100;
+    align-items: center;
+}
+
+#header #header-img-cont{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+}
+
+#header #header-img-cont h1{
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+#header-img{
+    height: 80px;
+    margin-left: 50px;
+
+}
+
+#nav-bar{
+    margin-left: 0px;
+    width: 50%;
+}
+
+#nav-bar ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 0%;
+    padding-left: 40%;
+    padding-right: 5%;
+    height: 100%;
+    list-style: none;
+}
+
+#nav-bar ul a{
+    text-transform: uppercase;
+}
+
+#form-container{
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+#form-container #form #email{
+    height: 30px;
+    width: 300px;
+}
+
+#form-container #form #submit{
+    background-color: white;
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    text-transform: uppercase;
+}
+
+#video-container{
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+    
+}
+
+#video-container #video{
+    margin: auto;
+    width: 60%;
+    height: 600px;
+    box-shadow: 0px 0px 20px #ccc;
+}
+
+#catalog-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 150px;
+    width: 100%;
+}
+
+.card{
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin-bottom: 25px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 10px #ccc;
+    
+    
+}
+.card-img{
+    width: 100%;
+
+}
+
+.card-img img{
+    width: 100%;
+}
+
+.card-title,
+.card-price{
+    padding: 20px;
+    text-align: center;
+    height: 50px;
+}
+
+.card-price{
+    font-size: 40px;
+    color: red;
+}
+
+#footer{
+    background-color: white;
+    box-shadow: 0px 0px 10px #ccc;
+    height: 35px;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 20px;
+}
+
+#footer h3{
+    text-transform: uppercase;
+}
+
+
+@media(max-width:1300px){
+    #header #header-img-cont h1{
+        font-size: 20px;
+    }
+
+    #video-container #video{
+            height: 400px;
+            width: 80%;
+    }
+}
+
+@media(max-width:1200px){
+    #nav-bar ul{
+        padding-left: 20px;
+    }
+
+}
+
+@media(max-width:900px){
+    #header #header-img-cont h1{
+        font-size: 15px;
+    }
+
+    #video-container #video{
+        height: 300px;
+        width: 85%;
+    }
+}
+
+@media(max-width:750px){
+    #header #header-img-cont{
+        width: 100%;
+    }
+
+    #nav-bar{
+        width: 100%;
+        height: 30px;
+    }
+
+    #nav-bar ul{
+        height: 30px;
+    }
+}
+
+@media(max-width:600px){
+    #video-container #video{
+        height: 300px;
+        width: 100%;
+    }
+}

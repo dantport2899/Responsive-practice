@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div id="main">
+        <header id="header">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Form for know about your knowlende</p>
+        </header>
+        <div id="container">
+            <form id="survey-form" action="">
+                <div class="formbox">
+                    <label id="name-label" for="name">Name</label>
+                    <input id="name" type="text" placeholder="Enter your Name" required>
+                </div>
+                <div class="formbox">
+                    <label id="email-label" for="email">Email</label>
+                    <input id="email" type="email" placeholder="Enter your Email" required>
+                </div>
+                <div class="formbox">
+                    <label id="number-label" for="number">Number</label>
+                    <input id="number" type="number" placeholder="Enter your Age" min="18" max="99" required>
+
+                </div>
+                <div class="formbox">
+                    <label id="dropdown-label" for="dropdown">Gener</label>
+                    <select name="gener" id="dropdown">
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                        <option value="">Other</option>
+                    </select>
+                </div>
+                <div class="formbox">
+                    <label for="">Select your Ocupation</label>
+                    <div class="radio">
+                        <input type="radio" name="Ocupation" value="Developer">
+                        <label for="">Developer</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="Ocupation" value="Student">
+                        <label for="">Student</label>
+                    </div>
+                </div>
+                <div class="formbox">
+                    <label id="skillt" for="">Skills</label>
+                    <div class="check">
+                        <input type="checkbox" value="JavaScript">
+                        <label for="">JavaScript</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" value="PHP">
+                        <label for="">PHP</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" value="PHP">
+                        <label for="">Python</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" value="Ruby">
+                        <label for="">Ruby</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" value="C#">
+                        <label for="">C#</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" value="Visual">
+                        <label for="">Visual</label>
+                    </div>
+                </div>
+                <div class="formbox">
+                    <label for="">Additional Comments</label>
+                    <textarea name="" id="" cols="45" rows="10" placeholder="Enter your comments here..."></textarea>
+                </div>
+                <div class="formbox">
+                    <button id="submit" type="submit">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
