@@ -16,13 +16,13 @@
                 <h1>CSS Documentation</h1>
             </header>
             <ul>
-                <li><a class="nav-link" href="#">Introduction</a></li>
-                <li><a class="nav-link" href="#">Animation & Transitions</a></li>
-                <li><a class="nav-link" href="#">Color</a></li>
-                <li><a class="nav-link" href="#">Display</a></li>
-                <li><a class="nav-link" href="#">Extensions</a></li>
-                <li><a class="nav-link" href="#">Fonts</a></li>
-                <li><a class="nav-link" href="#">Media Queries</a></li>
+                <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                <li><a class="nav-link" href="#Animation_&_Transitions">Animation & Transitions</a></li>
+                <li><a class="nav-link" href="#Color">Color</a></li>
+                <li><a class="nav-link" href="#Display">Display</a></li>
+                <li><a class="nav-link" href="#Extensions">Extensions</a></li>
+                <li><a class="nav-link" href="#Fonts">Fonts</a></li>
+                <li><a class="nav-link" href="#Media_Queries">Media Queries</a></li>
             </ul>
         </nav>
         <section id="Introduction" class="main-section">
@@ -42,7 +42,7 @@
                     }
                 </code>
             </div>
-            
+
             <p>... where :</p>
             <div class="code">
                 <code>
@@ -55,7 +55,7 @@
                 </code>
             </div>
 
-            
+
 
         </section>
         <section id="Animation_&_Transitions" class="main-section">
@@ -79,7 +79,7 @@
                     animation: slidein 3s;
                 </code>
             </div>
-            
+
             <p>A description of which properties are animatable is available; it's worth noting that this description is
                 also valid for CSS transitions.</p>
 
@@ -96,89 +96,155 @@
             </ul>
 
         </section>
-        <section id="Introduction" class="main-section">
+        <section id="Color" class="main-section">
             <header>
-                <h1>Introduction</h1>
+                <h1>Color</h1>
             </header>
-            <p>Use this CSS reference to browse an alphabetical index of all of the standard CSS properties,
-                pseudo-classes, pseudo-elements, data types, functional notations and at-rules. You can also
-                browse key CSS concepts and a list of selectors organized by type. Also included is a brief
-                DOM-CSS / CSSOM reference.
+            <p>The color CSS data type represents a color. A <color> may also include an alpha-channel transparency
+                    value, indicating how the color should composite with its background.
             </p>
-            <h3>Basic rule syntax</h3>
+            <h3>A color can be defined in any of the following ways:</h3>
+            <ul>
+                <li>Using a keyword (such as blue or transparent). All existing keywords specify a color in the sRGB
+                    color space</li>
+                <li>Using the RGB cubic-coordinate system (via the #-hexadecimal or the rgb() and rgba() functional
+                    notations). These always specify a color in the sRGB color space</li>
+                <li>Using the HSL cylindrical-coordinate system (via the hsl() and hsla() functional notations). These
+                    always specify a color in the sRGB color space</li>
+                <li>Using the LCH cylindrical coordinate system, via the lch() functional notation. This can specify any
+                    visible color.</li>
+                <li>Using the Lab coordinate system, via the lab() functional notation. This can specify any visible
+                    color.</li>
+                <li>Using the color() functional notation, to specify a color in a variety of predifined or custom color
+                    spaces.</li>
+            </ul>
+
+        </section>
+        <section id="Display" class="main-section">
+            <header>
+                <h1>Display</h1>
+            </header>
+            <p>These keywords define whether an element generates display boxes at all.
+            </p>
+            <h3>Valid display-box values:</h3>
+            <p>contents
+                These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and
+                their child boxes. Please note that the CSS Display Level 3 spec defines how the contents value should
+                affect "unusual elements" — elements that aren’t rendered purely by CSS box concepts such as replaced
+                elements. See Appendix B: Effects of display: contents on Unusual Elements for more details.
+                <br>
+                Due to a bug in browsers this will currently remove the element from the accessibility tree — screen
+                readers will not look at what's inside. See the Accessibility concerns section below for more details.
+            </p>
+            <p>
+                none
+                Turns off the display of an element so that it has no effect on layout (the document is rendered as
+                though the element did not exist). All descendant elements also have their display turned off. To have
+                an element take up the space that it would normally take, but without actually rendering anything, use
+                the visibility property instead.
+            </p>
+            <h3>Examples</h3>
             <div class="code">
-                <code>style-rule ::=
-                            selectors-list {
-                              properties-list
-                            }
-                        </code>
+                <code>
+                    p.secret {
+                        display: none;
+                      }
+                </code>
             </div>
+            <div class="code">
+                <code>
+                    .outer {
+                        border: 2px solid red;
+                        width: 300px;
+                        display: contents;
+                      }
+                      
+                      .outer > div {
+                        border: 1px solid green;
+                      }
+                </code>
+            </div>
+        </section>
+        <section id="Extensions" class="main-section">
+            <header>
+                <h1>Extensions</h1>
+            </header>
+            <p>This property allows you to, for example, use different parts of one larger image as backgrounds in
+                different parts of your content.
+            <p>
 
-            <p>... where :</p>
-            <div class="code"> <code>
-                        selectors-list ::=
-                        selector[:pseudo-class] [::pseudo-element]
-                        [, selectors-list]
+            <p>This works very similarly to the -moz-image-region property, which is used with the list-style-image
+                property to use parts of an image as the bullets in lists. However, this can be used for any CSS
+                background. </p>
 
-                        properties-list ::=
-                        [property : value] [; properties-list]
-                    </code>
+            <p>The syntax for the rectangle is similar to the rect() function generating a <<shape>()> CSS type. All
+                    four values are relative to the upper left corner of the image.
+            </p>
+            <h3>Syntax</h3>
+            <div class="code">
+                <code>
+                    -moz-image-rect(url(), top, right, bottom, left);
+                </code>
             </div>
 
         </section>
-        <section id="Introduction" class="main-section">
+        <section id="Fonts" class="main-section">
             <header>
-                <h1>Introduction</h1>
+                <h1>Fonts</h1>
             </header>
-            <p>Use this CSS reference to browse an alphabetical index of all of the standard CSS properties,
-                pseudo-classes, pseudo-elements, data types, functional notations and at-rules. You can also
-                browse key CSS concepts and a list of selectors organized by type. Also included is a brief
-                DOM-CSS / CSSOM reference.
+            <p>CSS Fonts is a module of CSS that defines font-related properties and how font resources are loaded. It
+                lets you define the style of a font, such as its family, size and weight, line height, and the glyph
+                variants to use when multiple are available for a single character.
             </p>
-            <h3>Basic rule syntax</h3>
-            <div class="code"> <code>style-rule ::=
-                selectors-list {
-                  properties-list
-                }
-            </code></div>
-
-            <p>... where :</p>
-            <div class="code"><code>
-                selectors-list ::=
-                selector[:pseudo-class] [::pseudo-element]
-                [, selectors-list]
-
-                properties-list ::=
-                [property : value] [; properties-list]
-            </code>
+            <h3>Basic example</h3>
+            <p>
+                The following example shows a simple use of basic font properties to style a paragraph of text.
+            </p>
+            <div class="code">
+                <code>
+                    p {<br>
+                        width: 600px; <br>
+                        margin: 0 auto; <br>
+                        font-family: "Helvetica Neue", "Arial", sans-serif; <br>
+                        font-style: italic; <br>
+                        font-weight: 100; <br>
+                        font-variant-ligatures: normal; <br>
+                        font-size: 2rem; <br>
+                        letter-spacing: 1px; <br>
+                      }
+                 </code>
             </div>
-
         </section>
-        <section id="Introduction" class="main-section">
+        <section id="Media_Queries" class="main-section">
             <header>
-                <h1>Introduction</h1>
+                <h1>Media Queries</h1>
             </header>
-            <p>Use this CSS reference to browse an alphabetical index of all of the standard CSS properties,
-                pseudo-classes, pseudo-elements, data types, functional notations and at-rules. You can also
-                browse key CSS concepts and a list of selectors organized by type. Also included is a brief
-                DOM-CSS / CSSOM reference.
+            <p>The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more
+                media queries. With it, you specify a media query and a block of CSS to apply to the document if and
+                only if the media query matches the device on which the content is being used.
             </p>
             <h3>Basic rule syntax</h3>
-            <code>style-rule ::=
-                        selectors-list {
-                          properties-list
-                        }
-                    </code>
-            <p>... where :</p>
-            <code>
-                        selectors-list ::=
-                        selector[:pseudo-class] [::pseudo-element]
-                        [, selectors-list]
-
-                        properties-list ::=
-                        [property : value] [; properties-list]
-                    </code>
-
+            <p>The @media at-rule may be placed at the top level of your code or nested inside any other conditional
+                group at-rule.</p>
+            <div class="code">
+                <code>
+                    /* At the top level of your code */ <br>
+                    @media screen and (min-width: 900px) { <br>
+                    article { <br>
+                        padding: 1rem 3rem; <br>
+                    } <br>
+                    } <br>
+                    <br>
+                    /* Nested within another conditional at-rule */ <br>
+                    @supports (display: flex) { <br>
+                    @media screen and (min-width: 900px) { <br>
+                        article { <br>
+                        display: flex; <br>
+                        } <br>
+                    } <br>
+                    }
+                </code>
+            </div>
         </section>
     </main>
 </body>
