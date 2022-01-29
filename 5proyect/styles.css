@@ -44,6 +44,7 @@ body{
 #welcome-section{
     margin-top: 80px;
     width: 100%;
+    height: 100vh;
     text-align: center;
 }
 
@@ -64,7 +65,7 @@ body{
     padding-top: 60px;
 }
 
-#welcome-section #welcome span{
+#welcome-section #welcome span h1{
     display: block;
     font-family: monospace;
     font-size: 40px;
@@ -90,12 +91,13 @@ body{
     }
 }
 
-#skills{
+#skills,#projects,#contact{
     margin-top: 40px;
     background-color: black;
     opacity: 0.9;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    text-align: center;
 }
 
 #skills #skills-content{
@@ -104,7 +106,9 @@ body{
     flex-direction: col;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
     padding-top: 25vh;
 }
 
@@ -117,20 +121,164 @@ body{
     margin-bottom: 90px;
 }
 
-#skills #skills-content #skill{
+#skills #skills-content .skill{
     height: 150px;
-    width: auto;
-    margin-left: 8%;
+    flex-grow: 1;
+
 }
 
-#skills #skills-content #skill img{
+
+#skills #skills-content .skill img{
     height: 150px;
 }
 
-#projects{
-    margin-top: 40px;
-    background-color: black;
-    opacity: 0.9;
+#projects #title-work{
     width: 100%;
-    height: 100vh;
+    font-family: monospace;
+    text-transform: uppercase;
+    padding-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+#projects #projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+
+    width: 80%;
+    margin: auto;
+}
+
+#projects #projects-container .project{
+    margin-bottom: 60px;
+}
+
+#projects #projects-container .project img{
+    width: 100%;
+    
+}
+
+#projects #projects-container .project .project-title{
+    background-color: #ccc;
+    height: 40px;
+}
+
+#projects #projects-container .project .project-title a{
+    color: black;
+    line-height: 40px;
+}
+
+#contact{
+    min-height: 92vh !important;
+}
+
+#contact #title{
+    width: 100%;
+    font-family: monospace;
+    text-transform: uppercase;
+    padding-top: 25vh;
+    margin-bottom: 5vh;
+}
+
+#contact #title h1{
+    font-size: 40px;
+}
+
+#contact #title h3{
+    color: #ccc;
+}
+
+#contact #socials{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+#contact #socials .social{
+    flex-grow: 1;
+}
+
+#contact #socials .social img{
+    height: 150px;
+}
+
+footer{
+    width: 100%;
+    height: 8vh;
+    text-align: center;
+    line-height: 8vh;
+    background-color: #ccc;
+}
+
+footer h3{
+    color: black;
+}
+
+@media(max-width:1150px) {
+    #projects #projects-container{
+         justify-content: center;
+    }
+}
+
+@media(max-width:950px) {
+    #welcome-section #welcome span h1{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:750px) {
+    #welcome-section #welcome span h1{
+        font-size: 25px;
+    }
+}
+
+@media(max-width:600px) {
+    #welcome-section #welcome span h1{
+        font-size: 20px;
+    }
+
+    #skills #skills-content{
+        padding-top: 5vh;
+        justify-content: center;
+        padding-bottom: 5vh;
+    }
+       
+    #skills #skills-content .skill{
+        width: 100%;   
+        margin-bottom: 40px; 
+    }
+}
+
+@media(max-width:500px) {
+    #welcome-section #welcome span h1{
+        font-size: 15px;
+    }
+
+    #navbar ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    #contact #title{
+        padding-top: 15vh;
+        margin-bottom: 5vh;
+    }
+
+    #welcome-section img{
+        margin-top: 200px;
+        width: 200px;
+        border: 10px solid black;
+        border-radius: 100%;
+        background-color: white;
+        margin-bottom: 20px;
+    }
 }
